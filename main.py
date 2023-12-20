@@ -80,8 +80,12 @@ def main():
         degree = radian * 180 / math.pi
         if degree < 4:
             print("정상")
+            cv2.putText(img, "O", (70, 100), cv2.FONT_HERSHEY_PLAIN, 3,
+                        (255, 0, 0), 3)
         else :
             print("비정상")
+            cv2.putText(img, "X", (70, 100), cv2.FONT_HERSHEY_PLAIN, 3,
+                        (255, 0, 0), 3)
 
 
         cTime = time.time()
